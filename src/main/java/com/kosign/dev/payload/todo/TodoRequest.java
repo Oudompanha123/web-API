@@ -5,6 +5,4 @@ import lombok.ToString;
 
 public record TodoRequest(String title , Boolean status, Integer userId) {
 
-
-
 }

@@ -2,7 +2,6 @@ package com.kosign.dev.service.todo;
 
 import com.kosign.dev.domain.todo.Todo;
 import com.kosign.dev.domain.todo.TodoRepository;
-import com.kosign.dev.domain.todo.user.User;
 import com.kosign.dev.domain.todo.user.UserRepository;
 import com.kosign.dev.payload.todo.TodoRequest;
 import com.kosign.dev.payload.todo.TodoResponse;

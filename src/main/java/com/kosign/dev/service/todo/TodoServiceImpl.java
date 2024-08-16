@@ -1,6 +1,5 @@
 package com.kosign.dev.service.todo;
 
-import com.kosign.dev.domain.todo.Todo;
 import com.kosign.dev.domain.todo.TodoRepository;
 import com.kosign.dev.exception.CusNotFoundException;
 import com.kosign.dev.payload.todo.TodoMainRes;
@@ -52,8 +51,10 @@ public class TodoServiceImpl implements TodoService {
     @Override
     public Object getById(Long id) {
 
-        return todoRepository.findById(id)
-               .map(todoMapper::mapToTodoResponse)
-               .orElseThrow(() -> new CusNotFoundException("Todo Not Found"));
+        TodoResponse todoResponse = todoRepository.findById(id)
+                .map(todoMapper::mapToTodoResponse)
+                .orElseThrow(() -> new CusNotFoundException("Todo Not Found"));
+
+        return todoResponse;
     }
 }

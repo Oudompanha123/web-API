@@ -18,7 +18,7 @@ public class TodoController extends AbstractRestController{
 
     @PostMapping()
     public Object createTodo(@RequestBody TodoRequest payload) {
-        System.out.println(payload);
+        System.out.println("TodoRequest: " + payload);
         todoService.createTodo(payload);
         return ok();
     }
